@@ -9,6 +9,7 @@ export default {
     return axios("/api/books");
   },
   saveBook: function(bookData) {
+    //console.log("book data: ", bookData)
     return axios.post("/api/books", bookData);
   },
   deleteBook: function(id) {

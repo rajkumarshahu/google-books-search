@@ -4,6 +4,7 @@ const BookDescription = props => {
   return (
     <span>
       <div className="col-md-4" style={{ float: "left", marginTop: "20px" }}>
+        <p>{props.index}</p>
         <p><img alt={props.title} className="img-fluid" src={props.src} style={{ margin: "0 auto" }} /></p>
         <p style={{ fontSize: "30px" }}>{props.title}</p>
         <p><strong>Author(s):</strong> {props.authors}</p>
