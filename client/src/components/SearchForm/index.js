@@ -22,7 +22,7 @@ const SearchForm = props => {
               className='btn btn-lg btn-outline-success my-2 my-sm-0'
               type='submit'
             >
-              <i class="fas fa-search "></i>
+              <i className="fas fa-search "></i>
             </button>
           </div>
         </div>

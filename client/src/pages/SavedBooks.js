@@ -5,7 +5,8 @@ import API from "../utils/API";
 
 class SavedBooks extends Component {
     state = {
-        books: []
+        books: [],
+        alert: ""
       };
 
       // grab the books from /api/books
@@ -33,7 +34,9 @@ class SavedBooks extends Component {
       // deletes a book
       handleDeleteBook = id => {
         API.deleteBook(id)
+        .then(this.setState({alert: "Deleted"}))
           .then(res => this.loadBooks())
+
           .catch(err => console.log(err));
       }
     render() {
@@ -41,8 +44,10 @@ class SavedBooks extends Component {
 
         <div>
         <Jumbotron />
+
         <div className="container">
             {this.state.books.map((book, i) => (
+
                   <SavedBook
                     index = {i + 1}
                     key={book._id}
@@ -55,8 +60,12 @@ class SavedBooks extends Component {
                     description={book.description}
                     link={book.link}
                     handleDeleteBook={() => this.handleDeleteBook(book._id)}
+                    alertMessesage = {this.state.alert}
                   />
+
+
                 ))}
+
                 </div>
         </div>
 
