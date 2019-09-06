@@ -4,6 +4,7 @@ import SearchForm from "../components/SearchForm";
 import BookDescription from "../components/BookDescription";
 import API from "../utils/API";
 
+
 class Search extends Component {
   state = {
     books: [],
@@ -56,27 +57,18 @@ class Search extends Component {
     return (
       <div>
         <Jumbotron />
-
         <SearchForm
           value={this.state.search}
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit}
         />
         <div className="container">
+
+
         {this.state.books.map((book, i) => (
 
-          <div className="card">
-  <div className="card-header">
-    Search Result
-  </div>
-  <div className="card-body">
-    <h5 className="card-title">Special title treatment</h5>
-    <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
-
-
-    <BookDescription
-            index = {i + 1}
+          <BookDescription
+            index ={i + 1}
             key={book.id}
             title={book.volumeInfo.title}
             authors={
@@ -100,9 +92,6 @@ class Search extends Component {
                       description: book.volumeInfo.description,
                       link: book.volumeInfo.infoLink})}
           />
-  </div>
-</div>
-
 
         ))}
           </div>

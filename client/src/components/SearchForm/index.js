@@ -5,7 +5,7 @@ const SearchForm = props => {
     <div className='container'>
       <form className=''>
         <div className='row '>
-          <div className='form-group col-lg-10 col-sm-10 p-0'>
+          <div className='form-group col-lg-11 col-sm-11 p-0'>
             <input
               onChange={props.handleInputChange}
               value={props.value}
@@ -16,13 +16,13 @@ const SearchForm = props => {
               aria-label='Search'
             />
           </div>
-          <div className='form-group col-lg-2 col-sm-2 p-0'>
+          <div className='form-group col-lg-1 col-sm-1 p-0 text-center'>
             <button
               onClick={props.handleFormSubmit}
               className='btn btn-lg btn-outline-success my-2 my-sm-0'
               type='submit'
             >
-              Search
+              <i class="fas fa-search "></i>
             </button>
           </div>
         </div>

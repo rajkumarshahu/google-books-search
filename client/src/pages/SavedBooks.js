@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import SavedBook from "../components/SavedBook";
+import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 
 class SavedBooks extends Component {
@@ -37,13 +38,17 @@ class SavedBooks extends Component {
       }
     render() {
         return(
+
+        <div>
+        <Jumbotron />
         <div className="container">
-            {this.state.books.map(book => (
+            {this.state.books.map((book, i) => (
                   <SavedBook
+                    index = {i + 1}
                     key={book._id}
                     src={book
                       ? book.src
-                      : "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/book-icon.png"}
+                      : "http://icons.iconarchive.com/icons/thalita-torres/office/1024/school-book-icon.png"}
                     title={book.title}
                     authors={book.authors.join(", ")}
                     date={book.date}
@@ -52,6 +57,7 @@ class SavedBooks extends Component {
                     handleDeleteBook={() => this.handleDeleteBook(book._id)}
                   />
                 ))}
+                </div>
         </div>
 
         )
