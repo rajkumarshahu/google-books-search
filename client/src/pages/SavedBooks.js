@@ -53,7 +53,7 @@ class SavedBooks extends Component {
                     key={book._id}
                     src={book
                       ? book.src
-                      : "http://icons.iconarchive.com/icons/thalita-torres/office/1024/school-book-icon.png"}
+                      : "https://www.seekclipart.com/clipng/middle/325-3257121_ruler-clipart-book-green-book-icon-png-transparent.png"}
                     title={book.title}
                     authors={book.authors.join(", ")}
                     date={book.date}

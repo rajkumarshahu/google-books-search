@@ -86,7 +86,7 @@ class Search extends Component {
                       title: book.volumeInfo.title,
                       src: book.volumeInfo.imageLinks
                         ? book.volumeInfo.imageLinks.thumbnail
-                        : "http://icons.iconarchive.com/icons/thalita-torres/office/1024/school-book-icon.png",
+                        : "https://www.seekclipart.com/clipng/middle/325-3257121_ruler-clipart-book-green-book-icon-png-transparent.png",
                       authors: book.volumeInfo.authors,
                       date: book.volumeInfo.publishedDate,
                       description: book.volumeInfo.description,
