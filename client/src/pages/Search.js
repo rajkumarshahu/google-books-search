@@ -3,6 +3,7 @@ import Jumbotron from "../components/Jumbotron";
 import SearchForm from "../components/SearchForm";
 import BookDescription from "../components/BookDescription";
 import API from "../utils/API";
+import alertify from 'alertifyjs'
 
 
 class Search extends Component {
@@ -49,7 +50,7 @@ class Search extends Component {
   // saves book to database
   handleSaveBook = bookData => {
     API.saveBook(bookData)
-      .then(res => alert("Book Saved!"))
+      .then(res => alertify.alert("Book Saved!"))
       .catch(err => console.log(err));
   };
 

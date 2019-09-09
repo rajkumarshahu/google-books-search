@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import SavedBook from "../components/SavedBook";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
+import alertify from 'alertifyjs'
 
 class SavedBooks extends Component {
     state = {
@@ -34,8 +35,13 @@ class SavedBooks extends Component {
       // deletes a book
       handleDeleteBook = id => {
         API.deleteBook(id)
-        .then(this.setState({alert: "Deleted"}))
-          .then(res => this.loadBooks())
+        .then(res =>  alertify.confirm("Are you sure you want to delete this book !!!", function(){
+          alertify.success('Ok')
+
+        }
+
+        ))
+        .then(res => this.loadBooks())
 
           .catch(err => console.log(err));
       }

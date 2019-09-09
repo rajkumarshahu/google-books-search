@@ -1,6 +1,8 @@
 import React from "react";
 
+
 const SavedBook = props => {
+
   return (
     <span>
       <div className='card'>
@@ -25,9 +27,10 @@ const SavedBook = props => {
               </div>
               <button
 
-                onClick={props.handleDeleteBook}
+                onClick={  props.handleDeleteBook}
                 className='btn btn-danger btn-lg btn-block text-center save-btn mb-4'
               >
+
                 <i className='far fa-trash-alt'></i> Delete This Book
               </button>
             </div>
