@@ -21,7 +21,7 @@ This is a React-based Google Books Search app. This app displays books based on 
 ## Running app
 
 ```sh
-cd mongo-scraper
+cd google-books-search
 
 npm install (to install dependencies)
 
