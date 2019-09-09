@@ -17,20 +17,20 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 mongoose.set('useCreateIndex', true)
 // Connect to the Mongo DB
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://raj:raj1234@ds217548.mlab.com:17548/google-book-search",
-  {
-    useNewUrlParser: true,
-    useFindAndModify: false,
-    useCreateIndex: true,
-    useNewUrlParser: true,
-  },
-  () => {
-    console.log("MongoDB connected...");
-  }
-);
+// mongoose.connect(
+//   process.env.MONGODB_URI || "mongodb://raj:raj1234@ds217548.mlab.com:17548/google-book-search",
+//   {
+//     useNewUrlParser: true,
+//     useFindAndModify: false,
+//     useCreateIndex: true,
+//     useNewUrlParser: true,
+//   },
+//   () => {
+//     console.log("MongoDB connected...");
+//   }
+// );
 //connect to the Mongo DB
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks");
 
 // Send every other request to the React app
 // Define any API routes before this runs
